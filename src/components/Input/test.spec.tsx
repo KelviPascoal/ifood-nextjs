@@ -41,8 +41,5 @@ describe("<Input />", () => {
             expect(input).toHaveValue(text)
             expect(onInputChange).toHaveBeenCalledTimes(text.length)
         })
-
     })
-
-
 })

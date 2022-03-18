@@ -27,7 +27,6 @@ describe("<Button />", () => {
     });
   });
 
-
   it("testing onClick", () => {
     const functionTest = jest.fn()
     render(
@@ -37,6 +36,5 @@ describe("<Button />", () => {
     userEvent.click(button)
 
     expect(functionTest).toBeCalled()
-
   });
 });
