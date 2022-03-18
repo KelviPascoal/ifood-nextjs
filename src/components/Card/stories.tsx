@@ -16,7 +16,6 @@ Default.args = {
     title: "Restaurante",
     bgColor: "primary",
     textButton: "Ver opções",
-    hoverImage: 'https://static-images.ifood.com.br/image/upload/f_auto/webapp/landingV2/restaurant-8.png'
 };
 
 export const secundary: ComponentStory<typeof Card> = (args) => (
@@ -27,6 +26,4 @@ secundary.args = {
     title: "Mercado",
     bgColor: "secondary",
     textButton: "Buscar lojas",
-    hoverImage: 'https://static-images.ifood.com.br/image/upload/f_auto/webapp/landingV2/restaurant-8.png'
-
 };

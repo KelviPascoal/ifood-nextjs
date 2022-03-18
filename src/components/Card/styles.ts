@@ -2,9 +2,7 @@ import styled, { css } from "styled-components";
 import { CardProps } from ".";
 import { lighten } from 'polished';
 
-type CardStyleProps = Pick<CardProps, "bgColor"> & {
-  isHover: boolean;
-};
+type CardStyleProps = Pick<CardProps, "variant">;
 
 const ButtonColor = {
   primary: () => css`
@@ -16,8 +14,8 @@ const ButtonColor = {
 };
 
 export const Card = styled.a<CardStyleProps>`
-  ${({ theme, bgColor, isHover }) => css`
-    background-color: ${theme.colors[bgColor!]};
+  ${({ theme, variant }) => css`
+    background-color: ${theme.colors[variant!]};
     border: 0;
     border-radius: 2rem;
     width: 40.4rem;
@@ -35,7 +33,7 @@ export const Card = styled.a<CardStyleProps>`
       transform: bottom 0.8s;
 
     :hover {
-      background-color: ${lighten(0.2, theme.colors[bgColor!])};
+      background-color: ${lighten(0.2, theme.colors[variant!])};
 
       .hover-image {
         opacity: 1;
@@ -67,7 +65,7 @@ export const Card = styled.a<CardStyleProps>`
         height: 3.5rem;
         border: 0;
         border-radius: 1.2rem;
-        ${ButtonColor[bgColor!]};
+        ${ButtonColor[variant!]};
 
         display: flex;
         align-items: center;
@@ -82,18 +80,10 @@ export const Card = styled.a<CardStyleProps>`
     }
 
     img {
-      width: 22.5;
+      width: 22.5rem;
       position: absolute;
       right: 0;
       bottom: 0;
     }
-
-
   `}
-`;
-
-export const HoverImage = styled.img`
-  position: absolute;
-  bottom: 0;
-  
 `;
