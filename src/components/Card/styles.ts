@@ -24,21 +24,10 @@ export const Card = styled.a<CardStyleProps>`
     padding: 0 2rem;
     text-decoration: none;
     transition: background-color 0.2s;
-
-    .hover-image {
-        opacity: 0;
-        position: absolute;
-        bottom: 0;
-      }
-      transform: bottom 0.8s;
+    transform: bottom 0.8s;
 
     :hover {
       background-color: ${lighten(0.2, theme.colors[variant!])};
-
-      .hover-image {
-        opacity: 1;
-        bottom: 10rem;
-      }
     }
 
     display: flex;

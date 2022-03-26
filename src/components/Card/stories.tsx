@@ -14,7 +14,7 @@ export const Default: ComponentStory<typeof Card> = (args) => (
 Default.args = {
     image: "https://static-images.ifood.com.br/image/upload/f_auto/webapp/landingV2/restaurant.png",
     title: "Restaurante",
-    bgColor: "primary",
+    variant: "primary",
     textButton: "Ver opções",
 };
 
@@ -24,6 +24,6 @@ export const secundary: ComponentStory<typeof Card> = (args) => (
 secundary.args = {
     image: "https://static-images.ifood.com.br/image/upload/f_auto/webapp/landingV2/market.png",
     title: "Mercado",
-    bgColor: "secondary",
+    variant: "secondary",
     textButton: "Buscar lojas",
 };
