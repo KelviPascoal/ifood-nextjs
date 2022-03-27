@@ -1,3 +1,4 @@
+import { Yellow } from './../components/MiniCard/stories';
 export const theme = {
   grid: {
     container: "130rem",
@@ -7,6 +8,10 @@ export const theme = {
     secondary: "#b6d048",
     background: "#f7f7f7",
     backgroundLight: "#ffffff",
+    pink: "#f7879c",
+    red: "#ea1d2c",
+    purpure: "#8c5fc5",
+    yellow: "#f6d553",
 
     black: "#000000",
   },
