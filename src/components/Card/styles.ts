@@ -1,6 +1,5 @@
 import styled, { css } from "styled-components";
 import { CardProps } from ".";
-import { lighten } from 'polished';
 
 type CardStyleProps = Pick<CardProps, "variant">;
 
@@ -26,9 +25,6 @@ export const Card = styled.a<CardStyleProps>`
     transition: background-color 0.2s;
     transform: bottom 0.8s;
 
-    :hover {
-      background-color: ${lighten(0.2, theme.colors[variant!])};
-    }
 
     display: flex;
     justify-content: space-between;
@@ -55,6 +51,7 @@ export const Card = styled.a<CardStyleProps>`
         border: 0;
         border-radius: 1.2rem;
         ${ButtonColor[variant!]};
+        cursor: pointer;
 
         display: flex;
         align-items: center;
