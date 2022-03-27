@@ -11,8 +11,8 @@ export type MiniCardProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 
 export function MiniCard({ image, text, bgColor, imageAlt, ...props }: MiniCardProps) {
     return (
-        <S.ContainerMiniCard>
-        <S.MiniCard bgColor={bgColor} {...props}>
+        <S.ContainerMiniCard {...props}>
+        <S.MiniCard bgColor={bgColor}>
                 <img src={image} alt={imageAlt} />
         </S.MiniCard>
                 <span>{text}<RiArrowRightSLine /></span>

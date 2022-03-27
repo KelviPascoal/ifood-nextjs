@@ -2,31 +2,40 @@ import { css } from "styled-components";
 import styled from "styled-components";
 
 import { MiniCardProps } from ".";
-import { lighten } from "polished";
 
 type MiniCardStyleProps = Pick<MiniCardProps, "bgColor">;
 
-export const MiniCard = styled.button<MiniCardStyleProps>`
+export const MiniCard = styled.div<MiniCardStyleProps>`
   ${({ theme, bgColor }) => css`
-
     border: 0;
     background-color: ${theme.colors[bgColor]};
     border-radius: 2rem;
-    min-width: 18rem;
-    height: 4.6rem;
     padding: 0 2rem;
     text-decoration: none;
     top: -4.9rem;
+    cursor: pointer;
+
+    min-width: 18rem;
+    height: 4.6rem;
+
+    :hover {
+      min-width: 18.8rem ;
+      height: 4.68rem ;
+    }
 
     display: flex;
-
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
 
     img {
-      max-height: 10rem;
-      max-width: 14rem;
+      min-height: 10rem;
+      min-width: 14rem;
+      
+      :hover {
+        min-height: 10.8rem;
+        min-width: 14.8rem;
+      }
     }
   `}
 `;
@@ -36,7 +45,7 @@ export const ContainerMiniCard = styled.button`
     padding: 4.4rem 0 0.5rem 0;
     border: 0;
     background-color: transparent;
-    
+
     display: flex;
     flex-direction: column;
     justify-content: center;
