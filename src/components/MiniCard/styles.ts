@@ -21,6 +21,11 @@ export const MiniCard = styled.div<MiniCardStyleProps>`
     :hover {
       min-width: 18.8rem ;
       height: 4.68rem ;
+
+      img {
+        min-height: 10.8rem;
+        max-width: 14.8rem;
+      }
     }
 
     display: flex;
@@ -30,12 +35,7 @@ export const MiniCard = styled.div<MiniCardStyleProps>`
 
     img {
       min-height: 10rem;
-      min-width: 14rem;
-      
-      :hover {
-        min-height: 10.8rem;
-        min-width: 14.8rem;
-      }
+      max-width: 14rem;
     }
   `}
 `;

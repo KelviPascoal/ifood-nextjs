@@ -46,4 +46,12 @@ describe("<MiniCard />", () => {
 
         expect(functionTest).toBeCalled()
     })
+
+    it('testing if hover change component size', () => {
+        const functionTest = jest.fn();
+        render(<MiniCard data-testid="mini-card" onClick={functionTest} {...miniCardMock.purpure} />)
+        
+        userEvent.click(screen.getByTestId('mini-card'))
+        expect(functionTest).toBeCalled()
+    })
 })
