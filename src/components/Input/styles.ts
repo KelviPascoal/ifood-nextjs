@@ -18,6 +18,7 @@ export const InputContainer = styled.div`
     input {
       font-size: ${theme.font.sizes.medium};
       color: ${theme.font.colors.gray};
+      font-weight: 300;
       background-color: transparent;
       border: 0;
       padding-left: ${theme.font.sizes.xsmall};
