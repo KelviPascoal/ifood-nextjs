@@ -1,32 +1,6 @@
-import { Container } from "components/Container";
+import Image from "next/image";
 import styled, { css } from "styled-components";
 
-export const Header = styled.header`
-  ${({ theme }) => css`
-    justify-content: space-between;
-    align-items: center;
-    padding: 3rem 0;
-
-    display: flex;
-    gap: 1.5rem;
-
-    img {
-      margin-right: 6rem;
-    }
-
-    nav {
-      display: flex;
-      gap: 4rem;
-      margin-right: auto;
-
-      a {
-        text-decoration: none;
-        color: ${theme.font.colors.black};
-        font-size: 1.6rem;
-      }
-    }
-  `}
-`;
 
 export const Containt = styled.div`
   padding: 0 16%;
@@ -47,6 +21,7 @@ export const Tilte = styled.div`
     justify-content: center;
     align-items: center;
     padding: 3rem 0;
+    margin-bottom: 3.6rem;
 
     h1 {
       font-size: 3.6rem;
@@ -67,6 +42,7 @@ export const Cards = styled.div`
 
   display: flex;
   justify-content: center;
+
 `;
 
 export const MiniCards = styled.div`
@@ -75,4 +51,122 @@ export const MiniCards = styled.div`
 
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 `;
+
+export const Section = styled.section`
+  padding: 7rem 0 5rem 0;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  
+  h3 {
+    font-size: 2.4rem;
+    font-weight: 400;
+  }
+`;
+
+export const Row = styled.section`
+  display: flex;
+  gap: 1.6rem;
+  flex-wrap: wrap;
+
+`;
+
+export const Banner = styled.div`
+  ${({theme}) => css`
+  margin: 0 5rem 7rem 5rem;
+  flex-wrap: wrap;
+
+
+  display: flex;
+  justify-content: center;
+  gap: 10rem;
+
+
+  @media(max-width: 1067px) {
+    gap: 1.6rem;
+    }
+
+  main {
+    position: relative;
+    width: 47rem;
+    height: 45rem;
+    background: url('/img/backgroundImageItem.svg') 1% bottom;
+    background-repeat: no-repeat;
+    background-size: 40rem;
+
+    aside {
+      width: 23.7rem;
+      height: 13.2;
+      margin-left: auto;
+      padding: 3.5rem 0;
+      margin-top: 7.2rem;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 2.5rem;
+
+      h3 {
+        font-size: 3.6rem;
+        color: ${theme.font.colors.black};
+      }
+      
+      p {
+        font-size: 1.6rem;
+        color: ${theme.font.colors.darkGray};
+      }
+    }
+
+    div {
+      position: absolute;
+      bottom: -2rem;
+      left: 1rem;
+    }
+  }
+  `}
+`;
+
+export const AdvertisingCover = styled.div`
+  ${({theme}) => css`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 8rem 10.8rem;
+  flex-wrap: wrap;
+
+
+  @media(max-width: 1067px) {
+    gap: 1.6rem;
+    }
+
+    aside {
+      width: 23.7rem;
+      height: 35rem;
+      padding: 3.5rem 0;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+     
+      h3 {
+        font-size: 3.6rem;
+        color: ${theme.font.colors.black};
+      }
+      
+      p {
+        font-size: 1.6rem;
+        color: ${theme.font.colors.darkGray};
+      }
+    }
+  }
+  `}
+`;
+
+// export const AdvertisingCoverImage = styled(Image)`
+
+// `;
