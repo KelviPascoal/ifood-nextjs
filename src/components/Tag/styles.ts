@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { darken } from "polished";
 import styled, { css } from "styled-components";
 
@@ -5,6 +6,7 @@ export const TagStyle = styled.button`
   ${({ theme }) => css`
     padding: 2rem 1.6rem;
     width: 23.3rem;
+    height: 13.2rem;
     border-radius: 0.8rem;
     border: 1px solid #dcdcdc;
     position: relative;
@@ -28,12 +30,6 @@ export const TagStyle = styled.button`
       color: ${theme.colors.primary};
     }
 
-    img {
-      border-radius: 50%;
-      height: 5.5rem;
-      width: 5.5rem;
-    }
-
     div {
       display: flex;
       flex-direction: column;
@@ -52,4 +48,8 @@ export const TagStyle = styled.button`
       }
     }
   `}
+`;
+
+export const ImageStyled = styled(Image)`
+  border-radius: 50%;
 `;

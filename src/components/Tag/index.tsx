@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ButtonHTMLAttributes } from "react";
 import { MdVerified } from "react-icons/md";
 import * as S from "./styles";
@@ -21,7 +22,7 @@ export function Tag({
     return (
         <S.TagStyle {...props}>
             {checked && <MdVerified />}
-            <img src={image} alt={alt} />
+            <S.ImageStyled src={image} alt={alt} width={56} height={56} />
             <div>
                 <strong>{title}</strong>
                 <span>{subTitle}</span>
