@@ -20,26 +20,37 @@ export const Card = styled.a<CardStyleProps>`
     width: 40.4rem;
     height: 21.1rem;
     position: relative;
-    padding: 0 2rem;
     text-decoration: none;
     transition: background-color 0.2s;
     transform: bottom 0.8s;
 
-
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.8rem 0 3.6rem 2rem;
 
-    div {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: space-between;
-      padding: 1.8rem 0 3.6rem 0;
+    @media(max-width: 891px) {
+      align-items: center;
+      padding: 1.6rem 0;
+      min-width: 4rem;
+      width: 30.4rem;
+    }
 
+    @media(max-width: 682px) {
+      align-items: center;
+      padding: 1.6rem 0;
+      min-width: 4rem;
+      width: 20rem;
+    }
+   
       h2 {
         color: ${theme.font.colors.white};
         font-size: 3.6rem;
+
+        @media(max-width: 891px) {
+          font-size: 2rem;
+        }
       }
 
       button {
@@ -64,12 +75,17 @@ export const Card = styled.a<CardStyleProps>`
         }
       }
     }
+  `}
+`;
 
-    img {
-      width: 22.5rem;
+export const ImgContainer = styled.div`
       position: absolute;
       right: 0;
       bottom: 0;
-    }
-  `}
+
+      @media(max-width: 891px) {
+      width: 13.8rem;
+      position: static;
+      margin-top: auto;
+      }
 `;
