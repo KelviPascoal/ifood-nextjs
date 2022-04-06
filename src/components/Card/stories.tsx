@@ -16,7 +16,7 @@ Default.args = {
     title: "Restaurante",
     variant: "primary",
     textButton: "Ver opções",
-    altImg: "ir para opções de restalrante"
+    altImg: "ir para opções de restalrante",
 };
 
 export const secundary: ComponentStory<typeof Card> = (args) => (

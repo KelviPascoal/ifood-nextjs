@@ -9,8 +9,6 @@ export type CardProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
   variant?: "primary" | "secondary";
   image: string;
   altImg: string;
-  imgWidt: number;
-  imgHeigt: number;
 };
 
 export function Card({
@@ -20,15 +18,13 @@ export function Card({
   title,
   textButton,
   altImg,
-  imgHeigt,
-  imgWidt,
   ...props
 }: CardProps) {
   return (
     <S.Card href={href} variant={variant} {...props}>
       <h2>{title}</h2>
       <S.ImgContainer>
-          <Image src={image} alt={altImg} width={imgWidt} height={imgHeigt} />
+          <Image src={image} alt={altImg} width={225} height={157} />
       </S.ImgContainer>
       <button>
         {textButton}

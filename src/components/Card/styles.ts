@@ -17,7 +17,9 @@ export const Card = styled.a<CardStyleProps>`
     background-color: ${theme.colors[variant!]};
     border: 0;
     border-radius: 2rem;
-    width: 40.4rem;
+    max-width: 40.4rem;
+    width: 100%;
+    min-width: 6.4rem;
     height: 21.1rem;
     position: relative;
     text-decoration: none;
@@ -33,15 +35,17 @@ export const Card = styled.a<CardStyleProps>`
     @media(max-width: 891px) {
       align-items: center;
       padding: 1.6rem 0;
-      min-width: 4rem;
-      width: 30.4rem;
+      max-width: 30.4rem;
     }
 
     @media(max-width: 682px) {
-      align-items: center;
       padding: 1.6rem 0;
-      min-width: 4rem;
-      width: 20rem;
+      max-width: 20rem;
+    }
+
+    @media(max-width: 322px) {
+      padding: 1.6rem 0;
+      max-width: 16rem;
     }
    
       h2 {
@@ -68,10 +72,28 @@ export const Card = styled.a<CardStyleProps>`
         align-items: center;
         justify-content: center;
 
+        @media(max-width: 891px) {
+        font-size: 1.4rem;
+        width: 80%;
+
+        }
+
+        @media(max-width: 682px) {
+        font-size: 1.2rem;
+        }
+
         svg {
           font-size: 1.6rem;
           margin-left: 1rem;
           margin-top: 0.3rem;
+
+          @media(max-width: 891px) {
+          font-size: 1.4rem;
+          }
+
+          @media(max-width: 682px) {
+          font-size: 1.2rem;
+          }
         }
       }
     }
@@ -79,13 +101,19 @@ export const Card = styled.a<CardStyleProps>`
 `;
 
 export const ImgContainer = styled.div`
-      position: absolute;
-      right: 0;
-      bottom: 0;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 
-      @media(max-width: 891px) {
-      width: 13.8rem;
-      position: static;
-      margin-top: auto;
-      }
+  @media (max-width: 891px) {
+    max-width: 15.8rem;
+    position: static;
+    margin-top: auto;
+  }
+
+  @media (max-width: 740px) {
+    position: static;
+    margin-top: auto;
+    max-width: 13.8rem;
+  }
 `;
