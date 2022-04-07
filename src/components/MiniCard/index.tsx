@@ -30,13 +30,13 @@ export function MiniCard({ variant, ...props }: MiniCardProps) {
       <S.MiniCard variant={variant}>
         <S.ContainerImage variant={variant}>
           {variant === "pharmacy" ? (
-            <Image src="/img/pharmacy.webp" alt="" height={86} width={100} />
+            <Image src="/img/pharmacy.webp" alt="serviços de farmacia" height={86} width={100} />
           ) : variant === "petshop" ? (
-            <Image src="/img/petshop.webp" alt="" height={77} width={135} />
+            <Image src="/img/petshop.webp" alt="serviços de pet shop" height={77} width={135} />
           ) : variant === "express" ? (
-            <Image src="/img/express.webp" alt="express.webp" height={93} width={97} />
+            <Image src="/img/express.webp" alt="express entregas em ate 15 minutos" height={93} width={97} />
           ) : (
-            <Image src="/img/drinks.webp" alt="" height={96} width={140} />
+            <Image src="/img/drinks.webp" alt="entrega de bebidas" height={96} width={140} />
           )}
         </S.ContainerImage>
       </S.MiniCard>
