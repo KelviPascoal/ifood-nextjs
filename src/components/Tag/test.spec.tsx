@@ -4,7 +4,6 @@ import { Tag } from ".";
 import { tagMock } from "./mock";
 
 describe('<Tag />', () => {
-
     it("testing onClick", () => {
         const functionTest = jest.fn()
         const tag = render(
