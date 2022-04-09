@@ -37,10 +37,11 @@ export const Card = styled.button<CardStyleProps>`
     
     @media(max-width: ${theme.breakPoints.tablet}) {
       max-width: 33rem;
+      align-items: center;
+
     }
 
     @media(max-width: ${theme.breakPoints.moblideLarge}) {
-      align-items: center;
       padding: ${theme.spacings.small} 0;
       max-width: 21.7rem;
       min-height: 18rem;
@@ -64,11 +65,11 @@ export const CardImage = styled.div`
     bottom: 0;
 
     @media (max-width: ${theme.breakPoints.tablet}) {
+      position: static;
       max-width: 21rem;
     }
 
     @media (max-width: ${theme.breakPoints.moblideLarge}) {
-      position: static;
       max-width: 14.7rem;
       margin-top: auto;
     }
