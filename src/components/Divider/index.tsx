@@ -1,10 +1,16 @@
-import * as S from './styles'
+import * as S from "./styles";
 
 export type DividerProps = {
-    marginTop?: string;
-    marginBotton?: string;
-}
+  marginTop?: "small" | "medium" | "large";
+  marginBottom?: "small" | "medium" | "large";
+};
 
-export function Divider({...props}: DividerProps) {
-    return <S.DividerStyle {...props} />
-} 
+export function Divider({ marginTop, marginBottom, ...props }: DividerProps) {
+  return (
+    <S.DividerStyle
+      marginBottom={marginBottom}
+      marginTop={marginTop}
+      {...props}
+    />
+  );
+}
