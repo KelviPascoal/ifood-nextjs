@@ -6,35 +6,29 @@ import { Button } from ".";
 
 describe("<Button />", () => {
   it("shold render a Button default", () => {
-    render(
-      <Button>Teste Button</Button>
-    );
+    render(<Button>Test button</Button>);
 
-    expect(screen.getByRole("button", { name: /Teste Button/i })).toHaveStyle({
+    expect(screen.getByRole("button", { name: /Test button/i })).toHaveStyle({
       backgroundColor: theme.colors.primary,
       color: theme.font.colors.white,
     });
   });
 
   it("shold render a Button transparent", () => {
-    render(
-      <Button variant="transparent">Teste Button</Button>
-    );
+    render(<Button variant="transparent">Test button</Button>);
 
-    expect(screen.getByRole("button", { name: /Teste Button/i })).toHaveStyle({
+    expect(screen.getByRole("button", { name: /Test button/i })).toHaveStyle({
       backgroundColor: "transparent",
       color: theme.colors.primary,
     });
   });
 
   it("testing onClick", () => {
-    const functionTest = jest.fn()
-    render(
-      <Button onClick={functionTest}>Teste Button</Button>
-    );
-    const button = screen.getByRole("button", { name: /Teste Button/i })
-    userEvent.click(button)
+    const functionTest = jest.fn();
+    render(<Button onClick={functionTest}>Test button</Button>);
+    const button = screen.getByRole("button", { name: /Test button/i });
+    userEvent.click(button);
 
-    expect(functionTest).toBeCalled()
+    expect(functionTest).toBeCalled();
   });
 });

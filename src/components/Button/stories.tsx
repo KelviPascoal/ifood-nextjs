@@ -1,17 +1,16 @@
-import React from 'react';
+import React from "react";
 
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { Button } from '.';
-
+import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { Button } from ".";
 
 export default {
-    title: 'Button',
-    component: Button,
+  title: "Button",
+  component: Button,
 } as ComponentMeta<typeof Button>;
 
 export const Default: ComponentStory<typeof Button> = (args) => (
-    <Button {...args} />
+  <Button {...args} />
 );
 Default.args = {
-    children: "My Button",
+  children: "My Button",
 };

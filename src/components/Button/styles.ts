@@ -7,12 +7,12 @@ export type ButtonStyleProps = {
 
 export const Button = styled.button<ButtonStyleProps>`
   ${({ theme, variant }) => css`
-    min-height: 4.4rem;
-    padding: 0 2.2rem;
+    min-height: calc(${theme.spacings.large} + 0.4rem);
+    padding: 0 calc(${theme.spacings.small} + 0.2rem);
     border: 0;
     border-radius: ${theme.border.radius};
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: background-color ${theme.transition.fast};
     text-align: center;
     font-size: ${theme.font.sizes.medium};
     font-weight: ${theme.font.bold};
