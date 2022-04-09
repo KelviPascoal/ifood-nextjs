@@ -4,65 +4,32 @@ import styled from "styled-components";
 import { MiniCardProps } from ".";
 
 type MiniCardStyleProps = Pick<MiniCardProps, "variant">;
-// variant: "drinks" | "pharmacy" | "express" | "petshop";
-const variants = {
-  colors: {
-    drinks: (theme: DefaultTheme) => css`
-      background-color: ${theme.colors.yellow};
-    `,
-    pharmacy: (theme: DefaultTheme) => css`
-      background-color: ${theme.colors.pink};
-    `,
-    express: (theme: DefaultTheme) => css`
-      background-color: ${theme.colors.red};
-    `,
-    petshop: (theme: DefaultTheme) => css`
-      background-color: ${theme.colors.purpure};
-    `,
-  },
-  sizes: {
-    drinks: () => css`
-      max-width: 14rem;
-      /* min-height: 9.5rem; */
-    `,
-    pharmacy: () => css`
-      max-width: 10rem;
-      /* min-height: 8.6rem; */
-    `,
-    express: () => css`
-      max-width: 9.7rem;
-      /* min-height: 9.3rem; */
-    `,
-    petshop: () => css`
-      max-width: 13.5rem;
-      /* min-height: 7.7rem; */
-    `,
-  },
-};
 
 export const MiniCard = styled.div<MiniCardStyleProps>`
   ${({ theme, variant }) => css`
     border: 0;
-    ${variants.colors[variant](theme)}
-    border-radius: 0.8rem;
-    padding: 0 2rem;
+    background-color: ${theme.colors[variant]};
+    border-radius: ${theme.spacings.xxsmall};
+    padding: 0 ${theme.spacings.small};
     text-decoration: none;
-    top: -4.9rem;
     cursor: pointer;
 
-    min-width: 18.8rem;
+    min-width: calc(${theme.spacings.large} * 4.7);
     height: 4.7rem;
 
-      @media(max-width: 835px) {
-        min-width: 15.8rem;
-        height: 3.8rem;
-      }
-      /// large mobile
-      @media(max-width: 415px) {
-        min-width: 10.8rem;
-        height: 2.5rem;
-      }
+    @media (max-width: ${theme.breakPoints.tablet}) {
+      min-width: 15rem;
+      height: 3.8rem;
+    }
+    @media (max-width: ${theme.breakPoints.moblideLarge}) {
+      min-width: 12rem;
+      height: 2.8rem;
+    }
 
+    @media (max-width: ${theme.breakPoints.moblideSmall}) {
+      min-width: 10rem;
+      height: 2.6rem;
+    }
 
     display: flex;
     flex-direction: column;
@@ -83,7 +50,7 @@ export const ContainerMiniCard = styled.button`
     align-items: center;
 
     span {
-      font-size: 1.6rem;
+      font-size: ${theme.font.sizes.medium};
       margin-top: 1.2rem;
 
       display: flex;
@@ -98,23 +65,24 @@ export const ContainerMiniCard = styled.button`
   `}
 `;
 
-export const ContainerImage = styled.div<MiniCardStyleProps>`
-  ${({ variant }) => css`
-      max-width: 15rem;
+export const ContainerImage = styled.div`
+  ${({ theme }) => css`
+    max-width: 15rem;
 
-    ${variants.sizes[variant]}
-      ///tablet
-      @media(max-width: 835px) {
-        max-width: 12rem;
-        max-height: 9rem;
+    @media (max-width: ${theme.breakPoints.tablet}) {
+      max-width: 12rem;
+      max-height: 9rem;
+    }
 
-      }
-      /// large mobile
-      @media(max-width: 415px) {
-        max-width: 9rem;
-        max-height: 7rem;
-      }
- 
+    @media (max-width: ${theme.breakPoints.moblideLarge}) {
+      max-width: 9rem;
+      max-height: 7rem;
+    }
+
+    @media (max-width: ${theme.breakPoints.moblideSmall}) {
+      max-width: 8rem;
+      max-height: 6.2rem;
+    }
 
     display: flex;
     justify-content: center;
