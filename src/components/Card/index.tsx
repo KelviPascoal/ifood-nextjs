@@ -1,35 +1,38 @@
 import * as S from "./styles";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
-import { AnchorHTMLAttributes } from "react";
-import Image from "next/image";
+import Image, { ImageProps } from "next/image";
 
-export type CardProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
+export type CardProps = {
   title: string;
   textButton?: string;
   variant?: "primary" | "secondary";
-  image: string;
-  altImg: string;
+  image: ImageProps;
+  onClick?: () => void;
 };
 
 export function Card({
   image,
   variant = "primary",
-  href = "/",
   title,
+  onClick,
   textButton,
-  altImg,
   ...props
 }: CardProps) {
   return (
-    <S.Card href={href} variant={variant} {...props}>
-      <h2>{title}</h2>
-      <S.ImgContainer>
-          <Image src={image} alt={altImg} width={225} height={157} />
-      </S.ImgContainer>
-      <button>
+    <S.Card onClick={onClick} variant={variant} {...props}>
+      <S.CardTitle>{title}</S.CardTitle>
+      <S.CardImage>
+        <Image
+          src={image.src}
+          alt={image.alt}
+          width={image.width}
+          height={image.height}
+        />
+      </S.CardImage>
+      <S.CardButton variant={variant}>
         {textButton}
         <MdOutlineKeyboardArrowRight />
-      </button>
+      </S.CardButton>
     </S.Card>
   );
 }
