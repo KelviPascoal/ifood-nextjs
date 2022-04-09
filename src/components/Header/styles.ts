@@ -2,45 +2,80 @@ import styled, { css } from "styled-components";
 
 export const Header = styled.header`
   ${({ theme }) => css`
-    width: 127.8rem;
-    height: 13.6rem;
-    background-color: ${theme.colors.background};
+    width: calc(${theme.spacings.large} * 31.95);
+    height: calc(${theme.spacings.large} * 3 + 1.6rem);
     width: 100%;
-    /* position: fixed;
-    top: 0; */
-
-    justify-content: space-between;
-
-    align-items: center;
-    padding: 3rem 0;
 
     display: flex;
-    gap: 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+    gap: ${theme.spacings.xsmall};
+  `}
+`;
 
-    nav {
-      display: flex;
-      gap: 4rem;
-      margin-right: auto;
-      background-color: ${theme.colors.background};
+export const NavigationBar = styled.nav`
+  ${({ theme }) => css`
+    display: flex;
+    gap: ${theme.spacings.large};
+    margin-right: auto;
 
-      @media(max-width: 959px) {
-        opacity: 0;
-        pointer-events: none;
-      }
+    a {
+      text-decoration: none;
+      color: ${theme.font.colors.black};
+      font-size: ${theme.font.sizes.medium};
+    }
 
-
-      a {
-        text-decoration: none;
-        color: ${theme.font.colors.black};
-        font-size: 1.6rem;
-      }
+    @media (max-width: ${theme.breakPoints.tablet}) {
+      opacity: 0;
+      pointer-events: none;
     }
   `}
 `;
 
-export const ContainerImage = styled.div`
-  min-width: 8.2rem;
-  min-height: 4.5rem;
-  margin-right: 6rem;
+export const HeaderContainer = styled.div`
+  ${({ theme }) => css`
+    background-color: ${theme.colors.background};
+    position: sticky;
+    top: 0;
+    z-index: ${theme.layers.menu};
+    padding: calc(${theme.spacings.small} + 0.6rem) ${theme.spacings.small};
+  `}
+`;
 
-`
+export const HeaderImage = styled.div`
+  ${({ theme }) => css`
+    min-width: calc(${theme.spacings.large} * 2);
+    min-height: ${theme.spacings.xlarge};
+    margin-right: ${theme.spacings.xxlarge};
+  `}
+`;
+
+export const NavgationDropDown = styled.button`
+  ${({ theme }) => css`
+    color: ${theme.font.colors.black};
+    background-color: transparent;
+    border: none;
+    opacity: 0;
+    pointer-events: none;
+    box-sizing: 0;
+    margin-bottom: calc(${theme.spacings.xsmall} + 0.4rem);
+
+    svg {
+      font-size: ${theme.font.sizes.xlarge};
+    }
+
+    @media (max-width: ${theme.breakPoints.tablet}) {
+      opacity: 1;
+      pointer-events: visible;
+    }
+  `}
+`;
+
+export const AccessArea = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    gap: ${theme.spacings.xxsmall};
+    justify-content: space-between;
+    min-width: calc(${theme.spacings.large} * 6);
+  `}
+`;
