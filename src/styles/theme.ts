@@ -37,7 +37,10 @@ export const theme = {
     },
   },
   border: {
-    radius: "0.6rem",
+    radius: {
+      default: "0.6rem",
+      rudimentar: "1.2rem",
+    },
   },
   spacings: {
     xxsmall: "0.8rem",
@@ -57,7 +60,7 @@ export const theme = {
   },
   transition: {
     default: "0.3s ease-in-out",
-    fast: "0.1s ease-in-out",
+    fast: "0.2s ease-in-out",
   },
   breakPoints: {
     laptopLarge: "144.0rem",
