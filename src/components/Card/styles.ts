@@ -38,7 +38,7 @@ export const Card = styled.button<CardStyleProps>`
     @media(max-width: ${theme.breakPoints.tablet}) {
       max-width: 33rem;
       align-items: center;
-
+      padding-left:  0;
     }
 
     @media(max-width: ${theme.breakPoints.moblideLarge}) {
@@ -92,7 +92,7 @@ export const CardButton = styled.span<CardStyleProps>`
     height: 3.5rem;
     text-align: center;
     border: 0;
-    border-radius: calc(${theme.border.radius} * 2);
+    border-radius: calc(${theme.border.radius.rudimentar} * 2);
     padding: 0 1.2rem;
     ${ButtonColors[variant!]};
     cursor: pointer;
@@ -100,6 +100,10 @@ export const CardButton = styled.span<CardStyleProps>`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media (max-width: ${theme.breakPoints.tablet}) {
+      width: 90%;
+    }
 
     @media (max-width: ${theme.breakPoints.moblideLarge}) {
       font-size: ${theme.font.sizes.small};

@@ -10,7 +10,7 @@ export const Button = styled.button<ButtonStyleProps>`
     min-height: calc(${theme.spacings.large} + 0.4rem);
     padding: 0 calc(${theme.spacings.small} + 0.2rem);
     border: 0;
-    border-radius: ${theme.border.radius};
+    border-radius: ${theme.border.radius.default};
     cursor: pointer;
     transition: background-color ${theme.transition.fast};
     text-align: center;

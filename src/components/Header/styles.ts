@@ -1,5 +1,14 @@
 import styled, { css } from "styled-components";
 
+export const HeaderContainer = styled.div`
+  ${({ theme }) => css`
+    background-color: ${theme.colors.background};
+    position: sticky;
+    top: 0;
+    z-index: ${theme.layers.menu};
+  `}
+`;
+
 export const Header = styled.header`
   ${({ theme }) => css`
     width: 127.8rem;
@@ -29,16 +38,6 @@ export const NavigationBar = styled.nav`
       opacity: 0;
       pointer-events: none;
     }
-  `}
-`;
-
-export const HeaderContainer = styled.div`
-  ${({ theme }) => css`
-    background-color: ${theme.colors.background};
-    position: sticky;
-    top: 0;
-    z-index: ${theme.layers.menu};
-    padding: calc(${theme.spacings.small} + 0.6rem) ${theme.spacings.small};
   `}
 `;
 

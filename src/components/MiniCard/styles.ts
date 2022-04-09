@@ -13,8 +13,7 @@ export const MiniCard = styled.div<MiniCardStyleProps>`
     padding: 0 ${theme.spacings.small};
     text-decoration: none;
     cursor: pointer;
-
-    min-width: calc(${theme.spacings.large} * 4.7);
+    min-width: 18.8rem;
     height: 4.7rem;
 
     @media (max-width: ${theme.breakPoints.tablet}) {
