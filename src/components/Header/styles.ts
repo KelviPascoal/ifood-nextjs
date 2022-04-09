@@ -2,8 +2,8 @@ import styled, { css } from "styled-components";
 
 export const Header = styled.header`
   ${({ theme }) => css`
-    width: calc(${theme.spacings.large} * 31.95);
-    height: calc(${theme.spacings.large} * 3 + 1.6rem);
+    width: 127.8rem;
+    height: 13.6rem;
     width: 100%;
 
     display: flex;
@@ -44,7 +44,7 @@ export const HeaderContainer = styled.div`
 
 export const HeaderImage = styled.div`
   ${({ theme }) => css`
-    min-width: calc(${theme.spacings.large} * 2);
+    min-width: 8rem;
     min-height: ${theme.spacings.xlarge};
     margin-right: ${theme.spacings.xxlarge};
   `}
@@ -58,7 +58,7 @@ export const NavgationDropDown = styled.button`
     opacity: 0;
     pointer-events: none;
     box-sizing: 0;
-    margin-bottom: calc(${theme.spacings.xsmall} + 0.4rem);
+    margin-bottom: 2rem;
 
     svg {
       font-size: ${theme.font.sizes.xlarge};
@@ -76,6 +76,6 @@ export const AccessArea = styled.div`
     display: flex;
     gap: ${theme.spacings.xxsmall};
     justify-content: space-between;
-    min-width: calc(${theme.spacings.large} * 6);
+    min-width: 24rem;
   `}
 `;
