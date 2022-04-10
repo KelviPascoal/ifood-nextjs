@@ -4,12 +4,23 @@ import { Container } from "components/Container";
 import { Divider } from "components/Divider";
 import { Header } from "components/Header";
 import { Input } from "components/Input";
+import { NavigationList } from "components/NavigationList";
+import {
+  cidadesListMock,
+  ifoodMarketingList,
+  descubraList,
+} from "components/NavigationList/listMock";
 import { MiniCard } from "components/MiniCard";
 import { Tag } from "components/Tag";
 import type { NextPage } from "next";
 import Image from "next/image";
 import { FiMapPin } from "react-icons/fi";
 import * as S from "./styles";
+
+import { ImFacebook } from "react-icons/im";
+import { GrTwitter } from "react-icons/gr";
+import { BsYoutube, BsInstagram } from "react-icons/bs";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   const restalranteImage = {
@@ -246,8 +257,8 @@ const Home: NextPage = () => {
           </S.Row>
         </S.Section>
 
-        <S.Banner>
-          <main>
+        <S.BannerContainer>
+          <S.BannerContent>
             <div>
               <Image
                 src="/img/delivery-man.svg"
@@ -257,13 +268,13 @@ const Home: NextPage = () => {
               />
             </div>
 
-            <aside>
+            <S.BannerInfo>
               <h3>Quer fazer entregas pelo iFood?</h3>
               <p>Faça agora o seu cadastro e comece o quanto antes.</p>
               <Button>Saiba mais</Button>
-            </aside>
-          </main>
-          <main>
+            </S.BannerInfo>
+          </S.BannerContent>
+          <S.BannerContent>
             <div>
               <Image
                 src="/img/store.svg"
@@ -272,13 +283,13 @@ const Home: NextPage = () => {
                 width={201}
               />
             </div>
-            <aside>
+            <S.BannerInfo>
               <h3>A sua fome de crescer ta no iFood</h3>
               <p>Cadastre seu restaurante ou o seu mercado</p>
               <Button>Saiba mais</Button>
-            </aside>
-          </main>
-        </S.Banner>
+            </S.BannerInfo>
+          </S.BannerContent>
+        </S.BannerContainer>
 
         <S.AdvertisingCover>
           <aside>
@@ -295,13 +306,40 @@ const Home: NextPage = () => {
             height={371}
           />
         </S.AdvertisingCover>
-
-        <Image
-          src="/img/ifood-benefits-desktop.webp"
-          alt="o vale que vai mudar a sua relação com benefícios, cartão ifood"
-          width={1278}
-          height={106}
+        <S.IfoodBeneficiosImg />
+        <NavigationList
+          title="Explore por cidades"
+          items={cidadesListMock}
+          numberOfSizes={5}
+          viwerAll={{
+            active: true,
+            path: "/",
+          }}
         />
+
+        <Divider />
+
+        <S.NavigationsList>
+          <NavigationList title="iFood" items={ifoodMarketingList} />
+          <NavigationList title="Descubra" items={descubraList} />
+          <S.SocialNetwork>
+            <h5>Social</h5>
+            <nav>
+              <Link href="/" passHref>
+                <ImFacebook />
+              </Link>
+              <Link href="/" passHref>
+                <GrTwitter />
+              </Link>
+              <Link href="/" passHref>
+                <BsYoutube />
+              </Link>
+              <Link href="/" passHref>
+                <BsInstagram />
+              </Link>
+            </nav>
+          </S.SocialNetwork>
+        </S.NavigationsList>
       </Container>
     </>
   );

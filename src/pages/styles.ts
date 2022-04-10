@@ -109,7 +109,7 @@ export const Row = styled.section`
   flex-wrap: wrap;
 `;
 
-export const Banner = styled.div`
+export const BannerContainer = styled.div`
   ${({ theme }) => css`
     margin: 0 5rem 7rem 5rem;
     flex-wrap: wrap;
@@ -126,77 +126,81 @@ export const Banner = styled.div`
     @media (max-width: ${theme.breakPoints.moblideLarge}) {
       margin: 0;
     }
+  `}
+`;
 
-    main {
-      position: relative;
-      width: 47rem;
-      height: 45rem;
-      background: url("/img/backgroundImageItem.svg") 1% bottom;
-      background-repeat: no-repeat;
-      background-size: 40rem;
+export const BannerContent = styled.div`
+  ${({ theme }) => css`
+    position: relative;
+    width: 47rem;
+    height: 45rem;
+    background: url("/img/backgroundImageItem.svg") 1% bottom;
+    background-repeat: no-repeat;
+    background-size: 40rem;
+
+    @media (max-width: ${theme.breakPoints.moblideLarge}) {
+      background-size: 30rem;
+      img {
+        width: 4rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      height: 50rem;
+      width: 100%;
+    }
+
+    @media (max-width: ${theme.breakPoints.moblideLarge}) {
+      display: flex;
+      align-items: center;
+    }
+
+    div {
+      position: absolute;
+      bottom: -2rem;
+      left: 1rem;
+    }
+  `}
+`;
+
+export const BannerInfo = styled.aside`
+  ${({ theme }) => css`
+    width: 23.7rem;
+    height: 13.2;
+    margin-left: auto;
+    padding: 3.5rem 0;
+    margin-top: 7.2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2.5rem;
+
+    @media (max-width: 600px) {
+      width: 80%;
+      margin-top: 0;
+    }
+
+    @media (max-width: ${theme.breakPoints.moblideLarge}) {
+      align-items: center;
+      margin: 0 auto;
+      margin-bottom: 18rem;
+      width: 100%;
+    }
+
+    h3 {
+      font-size: 3.6rem;
+      color: ${theme.font.colors.black};
 
       @media (max-width: ${theme.breakPoints.moblideLarge}) {
-        background-size: 30rem;
-        img {
-          width: 4rem;
-        }
+        font-size: ${theme.font.sizes.xxlarge};
       }
+    }
 
-      @media (max-width: 600px) {
-        height: 50rem;
-        width: 100%;
-      }
-
-      @media (max-width: ${theme.breakPoints.moblideLarge}) {
-        display: flex;
-        align-items: center;
-      }
-
-      aside {
-        width: 23.7rem;
-        height: 13.2;
-        margin-left: auto;
-        padding: 3.5rem 0;
-        margin-top: 7.2rem;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 2.5rem;
-
-        @media (max-width: 600px) {
-          width: 80%;
-          margin-top: 0;
-        }
-
-        @media (max-width: ${theme.breakPoints.moblideLarge}) {
-          align-items: center;
-          margin: 0 auto;
-          margin-bottom: 12rem;
-          width: 100%;
-        }
-
-        h3 {
-          font-size: 3.6rem;
-          color: ${theme.font.colors.black};
-
-          @media (max-width: ${theme.breakPoints.moblideLarge}) {
-            font-size: ${theme.font.sizes.xxlarge};
-          }
-        }
-
-        p {
-          font-size: 1.6rem;
-          color: ${theme.font.colors.darkGray};
-        }
-      }
-
-      div {
-        position: absolute;
-        bottom: -2rem;
-        left: 1rem;
-      }
+    p {
+      font-size: 1.6rem;
+      color: ${theme.font.colors.darkGray};
     }
   `}
 `;
@@ -254,5 +258,53 @@ export const AdvertisingCover = styled.div`
       }
     }
   }
+  `}
+`;
+
+export const IfoodBeneficiosImg = styled.div`
+  ${({ theme }) => css`
+    width: 100%;
+    margin: 0 auto;
+    height: 10.6rem;
+    background: url("/img/ifood-benefits-desktop.webp");
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    @media (max-width: ${theme.breakPoints.tablet}) {
+      height: 34.9rem;
+      background: url("/img/ifood-benefits-mobile.webp");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+  `}
+`;
+
+export const NavigationsList = styled.div`
+  ${({ theme }) => css`
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: initial;
+  `}
+`;
+
+export const SocialNetwork = styled.div`
+  ${({ theme }) => css`
+    margin-top: ${theme.spacings.large};
+
+    h5 {
+      font-size: ${theme.font.sizes.medium};
+      color: ${theme.font.colors.black};
+      font-weight: ${theme.font.bold};
+      margin-bottom: ${theme.spacings.large};
+    }
+    svg {
+      font-size: 3rem;
+      color: ${theme.font.colors.darkGray};
+    }
+
+    div {
+      display: flex;
+      justify-content: space-between;
+    }
   `}
 `;
