@@ -6,6 +6,9 @@ export const HeaderContainer = styled.div`
     position: sticky;
     top: 0;
     z-index: ${theme.layers.menu};
+
+    @media (max-width: ${theme.breakPoints.mobileMedium}) {
+    }
   `}
 `;
 
@@ -37,6 +40,7 @@ export const NavigationBar = styled.nav`
     @media (max-width: ${theme.breakPoints.tablet}) {
       opacity: 0;
       pointer-events: none;
+      display: none;
     }
   `}
 `;
@@ -72,9 +76,28 @@ export const NavgationDropDown = styled.button`
 
 export const AccessArea = styled.div`
   ${({ theme }) => css`
+    margin-left: auto;
     display: flex;
     gap: ${theme.spacings.xxsmall};
     justify-content: space-between;
     min-width: 24rem;
+
+    @media (max-width: ${theme.breakPoints.moblideLarge}) {
+      justify-content: center
+      gap: 0.2rem;
+      min-width: auto;
+
+      button {
+        margin-left: auto;
+        font-size: 1.2rem;
+
+        :first-child {
+        display: none;
+        opacity: 0;
+      }
+
+    
+      }
+    }
   `}
 `;

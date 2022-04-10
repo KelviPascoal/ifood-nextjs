@@ -20,15 +20,21 @@ export const MiniCard = styled.div<MiniCardStyleProps>`
       min-width: 15rem;
       height: 3.8rem;
     }
+
     @media (max-width: ${theme.breakPoints.moblideLarge}) {
-      min-width: 12rem;
+      min-width: 40%;
       height: 2.8rem;
     }
 
+    /* @media (max-width: ${theme.breakPoints.moblideLarge}) {
+      min-width: 12rem;
+      height: 2.8rem;
+    } */
+    /* 
     @media (max-width: ${theme.breakPoints.moblideSmall}) {
       min-width: 10rem;
       height: 2.6rem;
-    }
+    } */
 
     display: flex;
     flex-direction: column;
@@ -78,10 +84,14 @@ export const ContainerImage = styled.div`
       max-height: 7rem;
     }
 
-    @media (max-width: ${theme.breakPoints.moblideSmall}) {
+    @media (max-width: ${theme.breakPoints.moblideLarge}) {
+      max-width: 100%;
+    }
+
+    /* @media (max-width: ${theme.breakPoints.moblideSmall}) {
       max-width: 8rem;
       max-height: 6.2rem;
-    }
+    } */
 
     display: flex;
     justify-content: center;

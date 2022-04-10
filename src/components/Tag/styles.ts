@@ -22,9 +22,9 @@ export const Tag = styled.button`
       width: 80%;
       height: 9.6rem;
     }
-    @media (max-width: ${theme.breakPoints.moblideLarge}) {
+    /* @media (max-width: ${theme.breakPoints.moblideLarge}) {
       width: 60%;
-    }
+    } */
 
     display: flex;
     justify-content: initial;

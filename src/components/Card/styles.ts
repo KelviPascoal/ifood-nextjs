@@ -34,7 +34,6 @@ export const Card = styled.button<CardStyleProps>`
     flex-direction: column;
     align-items: flex-start;
     
-    
     @media(max-width: ${theme.breakPoints.tablet}) {
       max-width: 33rem;
       align-items: center;
@@ -42,6 +41,12 @@ export const Card = styled.button<CardStyleProps>`
     }
 
     @media(max-width: ${theme.breakPoints.moblideLarge}) {
+      max-width: 80%;
+      align-items: center;
+      padding-left:  0;
+    }
+
+    /* @media(max-width: ${theme.breakPoints.moblideLarge}) {
       padding: ${theme.spacings.small} 0;
       max-width: 21.7rem;
       min-height: 18rem;
@@ -53,7 +58,7 @@ export const Card = styled.button<CardStyleProps>`
 
     @media(max-width: ${theme.breakPoints.moblideSmall}) {
       max-width: 14.8rem;
-    }
+    } */
     }
   `}
 `;
