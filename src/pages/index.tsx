@@ -26,75 +26,84 @@ const Home: NextPage = () => {
     alt: "imagem de um carrinho de compras para representar supermercados",
   };
 
-  const miniCardImagesMock = {
-    drinks: {
-      src: "/img/drinks.webp",
-      height: 95,
-      width: 140,
-      alt: "imagem de duas bebidas, refrigerante e cerveja",
-    },
-
-    pharmacy: {
-      src: "/img/drinks.webp",
-      height: 95,
-      width: 140,
-      alt: "imagem de duas bebidas, refrigerante e cerveja",
-    },
-
-    express: {
-      src: "/img/drinks.webp",
-      height: 95,
-      width: 140,
-      alt: "imagem de duas bebidas, refrigerante e cerveja",
-    },
-
-    petshop: {
-      src: "/img/drinks.webp",
-      height: 95,
-      width: 140,
-      alt: "imagem de duas bebidas, refrigerante e cerveja",
-    },
-  };
-
   return (
     <>
       <Header />
+      <S.Background>
+        <Container>
+          <S.Content>
+            <S.Tilte>
+              <h1>Tudo pra facilitar seu dia a dia</h1>
+              <h2>O que você precisa está aqui. Peça e receba onde estiver.</h2>
+            </S.Tilte>
+
+            <S.SearchArea>
+              <Input
+                placeholder="Endereço de entrega e número"
+                icon={<FiMapPin />}
+              />
+              <Button>Buscar</Button>
+            </S.SearchArea>
+          </S.Content>
+        </Container>
+      </S.Background>
       <Container>
-        <S.Containt>
-          <S.Tilte>
-            <h1>Tudo pra facilitar seu dia a dia</h1>
-            <h2>O que você precisa está aqui. Peça e receba onde estiver.</h2>
-          </S.Tilte>
-
-          <S.Busca>
-            <Input
-              placeholder="Endereço de entrega e número"
-              icon={<FiMapPin />}
-            />
-            <Button>Buscar</Button>
-          </S.Busca>
-
-          <S.Cards>
-            <Card
-              image={restalranteImage}
-              title="Restaurante"
-              variant="primary"
-              textButton="Ver opções"
-            />
-            <Card
-              image={supermercadoImage}
-              title="Mercado"
-              variant="secondary"
-              textButton="Buscar lojas"
-            />
-          </S.Cards>
-
+        <S.Cards>
+          <Card
+            image={restalranteImage}
+            title="Restaurante"
+            variant="primary"
+            textButton="Ver opções"
+          />
+          <Card
+            image={supermercadoImage}
+            title="Mercado"
+            variant="secondary"
+            textButton="Buscar lojas"
+          />
+        </S.Cards>
+        <S.MiniCards>
           <MiniCard
-            image={miniCardImagesMock.drinks}
+            image={{
+              src: "/img/drinks.webp",
+              height: 95,
+              width: 140,
+              alt: "imagem de duas bebidas, refrigerante e cerveja",
+            }}
             variant="yellow"
             text="Bebidas"
           />
-        </S.Containt>
+          <MiniCard
+            image={{
+              src: "/img/pharmacy.webp",
+              height: 85,
+              width: 100,
+              alt: "imagem de um quite de primeiros socorros, representando farmácias",
+            }}
+            variant="pink"
+            text="Farmácia"
+          />
+          <MiniCard
+            image={{
+              src: "/img/express.webp",
+              height: 96,
+              width: 92,
+              alt: "foto de um celular escrito na tela entregas ate em 15 minutos",
+            }}
+            variant="pink"
+            text="Farmácia"
+          />
+          <MiniCard
+            image={{
+              src: "/img/petshop.webp",
+              height: 77,
+              width: 135,
+              alt: "foto de um pote de ração com biscoitos de cachorro",
+            }}
+            variant="purpure"
+            text="Pet shop"
+          />
+        </S.MiniCards>
 
         <Divider />
 
@@ -102,31 +111,56 @@ const Home: NextPage = () => {
           <h3>Os melhores restaurantes</h3>
           <S.Row>
             <Tag
-              image="/img/outback.webp"
+              image={{
+                src: "/img/outback.webp",
+                alt: "asdasd",
+                height: 56,
+                width: 56,
+              }}
               title="Outback Steakhouse"
               subTitle="Lanches"
               checked={true}
             />
             <Tag
-              image="/img/habibs.webp"
+              image={{
+                src: "/img/habibs.webp",
+                alt: "asdasd",
+                height: 56,
+                width: 56,
+              }}
               title="Habib's"
               subTitle="Lanches"
               checked={true}
             />
             <Tag
-              image="/img/chinaInBox.webp"
+              image={{
+                src: "/img/chinaInBox.webp",
+                alt: "asdasd",
+                height: 56,
+                width: 56,
+              }}
               title="China in Box"
               subTitle="Chinesa"
               checked={true}
             />
             <Tag
-              image="/img/cocoBambu.webp"
+              image={{
+                src: "/img/cocoBambu.webp",
+                alt: "asdasd",
+                height: 56,
+                width: 56,
+              }}
               title="Coco Bambu"
               subTitle="Frutos Do Mar"
               checked={true}
             />
             <Tag
-              image="/img/mcdonalds.webp"
+              image={{
+                src: "/img/mcdonalds.webp",
+                alt: "asdasd",
+                height: 56,
+                width: 56,
+              }}
               title="Mcdonald's"
               subTitle="Lanches"
               checked={true}
@@ -160,11 +194,51 @@ const Home: NextPage = () => {
         <S.Section>
           <h3>Os melhores mercados</h3>
           <S.Row>
-            <Tag image="/img/dio.webp" title="Dia Supermercado" />
-            <Tag image="/img/big.webp" title="Big" />
-            <Tag image="/img/etaly.webp" title="Eataly" />
-            <Tag image="/img/dio.webp" title="Dia Supermercado" />
-            <Tag image="/img/big.webp" title="Big" />
+            <Tag
+              image={{
+                src: "/img/dio.webp",
+                alt: "asdasd",
+                height: 56,
+                width: 56,
+              }}
+              title="Dia Supermercado"
+            />
+            <Tag
+              image={{
+                src: "/img/big.webp",
+                alt: "asdasd",
+                height: 56,
+                width: 56,
+              }}
+              title="Big"
+            />
+            <Tag
+              image={{
+                src: "/img/etaly.webp",
+                alt: "asdasd",
+                height: 56,
+                width: 56,
+              }}
+              title="Eataly"
+            />
+            <Tag
+              image={{
+                src: "/img/dio.webp",
+                alt: "asdasd",
+                height: 56,
+                width: 56,
+              }}
+              title="Dia Supermercado"
+            />
+            <Tag
+              image={{
+                src: "/img/big.webp",
+                alt: "asdasd",
+                height: 56,
+                width: 56,
+              }}
+              title="Big"
+            />
             {/* <Tag
             image="https://static-images.ifood.com.br/image/upload/t_thumbnail/logosgde/595f29c3-3264-4e74-8089-cec0421420fb/202002101723_dmdz_i.jpg"
             title="Eataly"
