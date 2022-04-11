@@ -15,7 +15,7 @@ import { Tag } from "components/Tag";
 import type { NextPage } from "next";
 import Image from "next/image";
 import { FiMapPin } from "react-icons/fi";
-import * as S from "./styles";
+import * as S from "../styles/HomeStyles";
 
 import { ImFacebook } from "react-icons/im";
 import { GrTwitter } from "react-icons/gr";
