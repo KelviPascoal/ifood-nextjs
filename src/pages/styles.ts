@@ -276,6 +276,18 @@ export const IfoodBeneficiosImg = styled.div`
       background-repeat: no-repeat;
       background-size: 100%;
     }
+
+    @media (max-width: ${theme.breakPoints.moblideLarge}) {
+      height: 19.5rem;
+    }
+
+    @media (max-width: ${theme.breakPoints.mobileMedium}) {
+      height: 17.2rem;
+    }
+
+    @media (max-width: ${theme.breakPoints.moblideLarge}) {
+      height: 14.2rem;
+    }
   `}
 `;
 
@@ -284,6 +296,14 @@ export const NavigationsList = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: initial;
+
+    @media (max-width: ${theme.breakPoints.tablet}) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: ${theme.breakPoints.moblideLarge}) {
+      grid-template-columns: 1fr;
+    }
   `}
 `;
 
@@ -297,14 +317,16 @@ export const SocialNetwork = styled.div`
       font-weight: ${theme.font.bold};
       margin-bottom: ${theme.spacings.large};
     }
-    svg {
-      font-size: 3rem;
-      color: ${theme.font.colors.darkGray};
-    }
 
-    div {
+    nav {
       display: flex;
-      justify-content: space-between;
+      justify-content: initial;
+      gap: ${theme.spacings.medium};
+
+      svg {
+        font-size: 3rem;
+        color: ${theme.font.colors.darkGray};
+      }
     }
   `}
 `;
