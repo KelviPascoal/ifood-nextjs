@@ -4,7 +4,7 @@ import { ListProps } from ".";
 
 type ListContainerProps = Pick<ListProps, "numberOfSizes">;
 
-export const ListHeader = styled.h5`
+export const ListHeader = styled.header`
   ${({ theme }) => css`
     margin-bottom: ${theme.spacings.large};
 
@@ -13,8 +13,6 @@ export const ListHeader = styled.h5`
     justify-content: space-between;
 
     a {
-      min-height: calc(${theme.spacings.large} + 0.4rem);
-      padding: 0 calc(${theme.spacings.small} + 0.2rem);
       border: 0;
       border-radius: ${theme.border.radius.default};
       cursor: pointer;
@@ -33,7 +31,7 @@ export const ListHeader = styled.h5`
   `}
 `;
 
-export const ListContainer = styled.ul`
+export const ListContainer = styled.div`
   ${({ theme }) => css`
     margin-top: ${theme.spacings.large};
     margin-bottom: ${theme.spacings.large};

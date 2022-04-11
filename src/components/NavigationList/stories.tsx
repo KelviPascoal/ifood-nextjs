@@ -16,4 +16,8 @@ Default.args = {
   title: "Explore por cidades",
   items: cidadesListMock,
   numberOfSizes: 5,
+  viwerAll: {
+    active: false,
+    path: "/",
+  },
 };
