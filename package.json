@@ -7,9 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "storybook": "start-storybook -s ./public -p 6006",
-    "build-storybook": "build-storybook -s ./public",
-    "build-storybook-docs": "build-storybook --docs -s ./public",
+    "storybook": "start-storybook -s public -p 6006",
+    "build-storybook": "build-storybook -s public",
+    "build-storybook-docs": "build-storybook --docs -s public",
     "storybook:serve": "npx http-server storybook-static -o -p 6006",
     "test": "jest",
     "test:watch": "jest --watch"
