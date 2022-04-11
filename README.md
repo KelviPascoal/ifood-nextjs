@@ -1,13 +1,13 @@
 #README
 
 # iFood clone nextjs
-![Desktop](public/preview/desktop-preview.png)
-![Mobile](public/preview/mobile-preview.png)
-![Mobile](public/preview/mobile-preview-2.png)
+<div style="display: flex; align-tems: center;">
+<img src="public/preview/desktop-preview.png">
+<img src="public/preview/mobile-preview.png">
+</div>
 
-## O que foi usado?
 
-Este projeto usa muitas coisas como:
+## O que foi usado:
 
 - [TypeScript](https://www.typescriptlang.org/)
 - [NextJS](https://nextjs.org/)
@@ -19,14 +19,19 @@ Este projeto usa muitas coisas como:
 
 ## Começando
 
-Primeiro, execute o servidor de desenvolvimento:
+```bash
+npm install
+# ou
+yarn
+```
+
+Para execute o servidor de desenvolvimento:
 
 ```bash
 npm run dev
 # ou
 yarn dev
 ```
-
 
 - `dev`: executa seu aplicativo em `localhost:3000`
 - `build`: cria a versão de compilação de produção
@@ -38,9 +43,9 @@ yarn dev
 - `build-storybook-docs`: criar a versão de compilação do storybook documents
 - `storybook:serve`: rodar o storybook compilado em um http server na porta 6006
 
-## Deploy on Netlify
+## Disponivel em Netlify
 
 Projeto [kelvi-ifood-clone
 ](https://kelvi-ifood-clone.netlify.app)
 
-Documentação [kelvi-ifood-clone-docs](https://kelvi-ifood-clone-docs.netlify.app)
+Documentação UI [kelvi-ifood-clone-docs](https://kelvi-ifood-clone-docs.netlify.app)
