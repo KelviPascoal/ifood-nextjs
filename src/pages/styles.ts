@@ -1,3 +1,4 @@
+import { darken } from "polished";
 import styled, { css } from "styled-components";
 
 export const Content = styled.div`
@@ -326,6 +327,12 @@ export const SocialNetwork = styled.div`
       svg {
         font-size: 3rem;
         color: ${theme.font.colors.darkGray};
+        cursor: pointer;
+
+        :hover {
+          color: ${darken(0.3, theme.font.colors.darkGray)};
+          transition: color ${theme.transition.fast};
+        }
       }
     }
   `}
