@@ -8,6 +8,7 @@ export const Tag = styled.button`
     max-width: 23.3rem;
     height: 13.2rem;
     width: 100%;
+    min-width: 20.4rem;
     border-radius: 0.8rem;
     border: 1px solid #dcdcdc;
     position: relative;
@@ -17,14 +18,6 @@ export const Tag = styled.button`
     :hover {
       border: 1px solid ${darken(0.2, "#dcdcdc")};
     }
-
-    @media (max-width: ${theme.breakPoints.tablet}) {
-      width: 80%;
-      height: 9.6rem;
-    }
-    /* @media (max-width: ${theme.breakPoints.moblideLarge}) {
-      width: 60%;
-    } */
 
     display: flex;
     justify-content: initial;

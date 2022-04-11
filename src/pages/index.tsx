@@ -125,8 +125,6 @@ const Home: NextPage = () => {
               image={{
                 src: "/img/outback.webp",
                 alt: "asdasd",
-                height: 56,
-                width: 56,
               }}
               title="Outback Steakhouse"
               subTitle="Lanches"
@@ -136,8 +134,6 @@ const Home: NextPage = () => {
               image={{
                 src: "/img/habibs.webp",
                 alt: "asdasd",
-                height: 56,
-                width: 56,
               }}
               title="Habib's"
               subTitle="Lanches"
@@ -147,8 +143,6 @@ const Home: NextPage = () => {
               image={{
                 src: "/img/chinaInBox.webp",
                 alt: "asdasd",
-                height: 56,
-                width: 56,
               }}
               title="China in Box"
               subTitle="Chinesa"
@@ -158,8 +152,6 @@ const Home: NextPage = () => {
               image={{
                 src: "/img/cocoBambu.webp",
                 alt: "asdasd",
-                height: 56,
-                width: 56,
               }}
               title="Coco Bambu"
               subTitle="Frutos Do Mar"
@@ -169,8 +161,6 @@ const Home: NextPage = () => {
               image={{
                 src: "/img/mcdonalds.webp",
                 alt: "asdasd",
-                height: 56,
-                width: 56,
               }}
               title="Mcdonald's"
               subTitle="Lanches"
@@ -209,8 +199,6 @@ const Home: NextPage = () => {
               image={{
                 src: "/img/dio.webp",
                 alt: "asdasd",
-                height: 56,
-                width: 56,
               }}
               title="Dia Supermercado"
             />
@@ -218,8 +206,6 @@ const Home: NextPage = () => {
               image={{
                 src: "/img/big.webp",
                 alt: "asdasd",
-                height: 56,
-                width: 56,
               }}
               title="Big"
             />
@@ -227,8 +213,6 @@ const Home: NextPage = () => {
               image={{
                 src: "/img/etaly.webp",
                 alt: "asdasd",
-                height: 56,
-                width: 56,
               }}
               title="Eataly"
             />
@@ -236,8 +220,6 @@ const Home: NextPage = () => {
               image={{
                 src: "/img/dio.webp",
                 alt: "asdasd",
-                height: 56,
-                width: 56,
               }}
               title="Dia Supermercado"
             />
@@ -245,15 +227,9 @@ const Home: NextPage = () => {
               image={{
                 src: "/img/big.webp",
                 alt: "asdasd",
-                height: 56,
-                width: 56,
               }}
               title="Big"
             />
-            {/* <Tag
-            image="https://static-images.ifood.com.br/image/upload/t_thumbnail/logosgde/595f29c3-3264-4e74-8089-cec0421420fb/202002101723_dmdz_i.jpg"
-            title="Eataly"
-          /> */}
           </S.Row>
         </S.Section>
 

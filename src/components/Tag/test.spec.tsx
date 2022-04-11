@@ -7,8 +7,6 @@ import { theme } from "styles/theme";
 const tagMock = {
   image: {
     src: "/img/big.webp",
-    height: 45,
-    width: 45,
     alt: "test alt",
   },
   title: "Habib's",
