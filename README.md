@@ -1,10 +1,9 @@
 #README
 
 # iFood clone nextjs
-<div style="display: flex; align-tems: center;">
-<img src="public/preview/desktop-preview.png">
-<img src="public/preview/mobile-preview.png">
-</div>
+
+|![Desktop](public/preview/desktop-preview.png)|![Desktop](public/preview/mobile-preview.png)|
+|---|---|
 
 
 ## O que foi usado:
@@ -18,7 +17,7 @@
 
 
 ## Começando
-
+Antes de tudo execute o comando para para instalar as dependências:
 ```bash
 npm install
 # ou
