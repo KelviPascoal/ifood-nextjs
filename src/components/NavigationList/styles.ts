@@ -71,6 +71,11 @@ export const ListItem = styled.li`
       text-decoration: none;
       color: ${theme.font.colors.darkGray};
       font-size: ${theme.font.sizes.medium};
+
+      :hover {
+        color: ${darken(0.3, theme.font.colors.darkGray)};
+        transition: color ${theme.transition.fast};
+      }
     }
   `}
 `;
