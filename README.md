@@ -5,6 +5,12 @@
 |![Desktop](public/preview/desktop-preview.png)|![Desktop](public/preview/mobile-preview.png)|
 |---|---|
 
+## Disponivel em Netlify
+
+Projeto [kelvi-ifood-clone
+](https://kelvi-ifood-clone.netlify.app)
+
+Documentação UI [kelvi-ifood-clone-docs](https://kelvi-ifood-clone-docs.netlify.app)
 
 ## O que foi usado:
 
@@ -17,14 +23,14 @@
 
 
 ## Começando
-Antes de tudo execute o comando para para instalar as dependências:
+Antes de tudo execute o comando para instalar as dependências:
 ```bash
 npm install
 # ou
 yarn
 ```
 
-Para execute o servidor de desenvolvimento:
+Para executar o servidor de desenvolvimento:
 
 ```bash
 npm run dev
@@ -42,9 +48,3 @@ yarn dev
 - `build-storybook-docs`: criar a versão de compilação do storybook documents
 - `storybook:serve`: rodar o storybook compilado em um http server na porta 6006
 
-## Disponivel em Netlify
-
-Projeto [kelvi-ifood-clone
-](https://kelvi-ifood-clone.netlify.app)
-
-Documentação UI [kelvi-ifood-clone-docs](https://kelvi-ifood-clone-docs.netlify.app)
