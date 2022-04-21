@@ -62,12 +62,12 @@ export const theme = {
     default: "0.3s ease-in-out",
     fast: "0.2s ease-in-out",
   },
-  breakPoints: {
-    laptopLarge: "144.0rem",
-    laptop: "102.4rem",
-    tablet: "76.8rem",
-    moblideLarge: "42.5rem",
-    mobileMedium: "37.5rem",
-    moblideSmall: "32.0rem",
+  breakpoints: {
+    laptopLarge: "1440px",
+    laptop: "1024px",
+    tablet: "768px",
+    moblideLarge: "425px",
+    mobileMedium: "375px",
+    moblideSmall: "320px",
   },
 };
