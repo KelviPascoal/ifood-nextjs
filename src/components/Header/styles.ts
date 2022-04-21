@@ -94,10 +94,61 @@ export const AccessArea = styled.div`
         :first-child {
         display: none;
         opacity: 0;
-      }
-
-    
+      }  
       }
     }
+  `}
+`;
+
+export const MenuMobile = styled.div`
+  ${({ theme }) => css`
+    z-index: ${theme.layers.modal};
+    overflow-x: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    background-color: ${theme.colors.backgroundLight};
+    padding: ${theme.spacings.medium}  ${theme.spacings.medium}  10%  ${theme.spacings.medium};
+    display: flex;
+    flex-direction: column;
+    align-items: initial;
+
+    a {
+      text-decoration: none;
+      color: ${theme.font.colors.black};
+      font-size: ${theme.font.sizes.medium};
+
+    }
+
+    div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+
+        }
+      }
+    }
+  `}
+`;
+
+export const MenuMobileHeader = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    align-items: initial;
+  `}
+`;
+
+export const MenuMobileInfo = styled.section`
+  ${({ theme }) => css`
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: ${theme.spacings.medium};
   `}
 `;

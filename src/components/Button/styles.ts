@@ -1,12 +1,11 @@
 import { darken, lighten } from "polished";
 import styled, { css, DefaultTheme } from "styled-components";
+import { ButtonProps } from ".";
 
-export type ButtonStyleProps = {
-  variant?: "default" | "transparent";
-};
+export type ButtonStyleProps = Pick<ButtonProps, "variant" | "fullWidth">;
 
 export const Button = styled.button<ButtonStyleProps>`
-  ${({ theme, variant }) => css`
+  ${({ theme, variant, fullWidth }) => css`
     min-height: calc(${theme.spacings.large} + 0.4rem);
     padding: 0 calc(${theme.spacings.small} + 0.2rem);
     border: 0;
@@ -17,11 +16,12 @@ export const Button = styled.button<ButtonStyleProps>`
     font-size: ${theme.font.sizes.medium};
     font-weight: ${theme.font.bold};
 
-    ${variants[variant!](theme)}
+    ${buttonModifiers[variant!](theme)}
+    ${fullWidth && buttonModifiers.fullWidth()}
   `}
 `;
 
-const variants = {
+const buttonModifiers = {
   default: (theme: DefaultTheme) => css`
     color: ${theme.font.colors.white};
     background-color: ${theme.colors.primary};
@@ -39,5 +39,8 @@ const variants = {
     :hover {
       color: ${darken(0.3, theme.colors.primary)};
     }
+  `,
+  fullWidth: () => css`
+    width: 100%;
   `,
 };
