@@ -49,7 +49,7 @@ export const ListContent = styled.ul<ListContainerProps>`
     flex-direction: column;
     gap: ${theme.spacings.small};
 
-    @media (max-width: ${theme.breakPoints.moblideLarge}) {
+    @media (max-width: ${theme.breakpoints.tablet}) {
       max-height: 100%;
     }
   `}
