@@ -27,38 +27,22 @@ export const Card = styled.button<CardStyleProps>`
     padding-top: 1.8rem;
     padding-right: 0;
     padding-bottom: 3.6rem;
-    padding-left:  2rem;
+    padding-left: 2rem;
 
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     align-items: flex-start;
-    
-    @media(max-width: ${theme.breakPoints.tablet}) {
-      max-width: 33rem;
+
+    @media (max-width: ${theme.breakpoints.tablet}) {
       align-items: center;
-      padding-left:  0;
+      padding-left: 0;
     }
 
-    @media(max-width: ${theme.breakPoints.moblideLarge}) {
+    @media (max-width: ${theme.breakpoints.moblideLarge}) {
       max-width: 80%;
       align-items: center;
-      padding-left:  0;
-    }
-
-    /* @media(max-width: ${theme.breakPoints.moblideLarge}) {
-      padding: ${theme.spacings.small} 0;
-      max-width: 21.7rem;
-      min-height: 18rem;
-    }
-
-    @media(max-width: ${theme.breakPoints.mobileMedium}) {
-      max-width: 16.3rem;
-    }
-
-    @media(max-width: ${theme.breakPoints.moblideSmall}) {
-      max-width: 14.8rem;
-    } */
+      padding-left: 0;
     }
   `}
 `;
@@ -69,21 +53,21 @@ export const CardImage = styled.div`
     right: 0;
     bottom: 0;
 
-    @media (max-width: ${theme.breakPoints.tablet}) {
+    @media (max-width: ${theme.breakpoints.tablet}) {
       position: static;
       max-width: 21rem;
     }
 
-    @media (max-width: ${theme.breakPoints.moblideLarge}) {
+    @media (max-width: ${theme.breakpoints.moblideLarge}) {
       max-width: 14.7rem;
       margin-top: auto;
     }
 
-    @media (max-width: ${theme.breakPoints.mobileMedium}) {
+    @media (max-width: ${theme.breakpoints.mobileMedium}) {
       max-width: 12.3rem;
     }
 
-    @media (max-width: ${theme.breakPoints.moblideSmall}) {
+    @media (max-width: ${theme.breakpoints.moblideSmall}) {
       max-width: 9.8rem;
     }
   `}
@@ -106,11 +90,11 @@ export const CardButton = styled.span<CardStyleProps>`
     align-items: center;
     justify-content: center;
 
-    @media (max-width: ${theme.breakPoints.tablet}) {
+    @media (max-width: ${theme.breakpoints.tablet}) {
       width: 90%;
     }
 
-    @media (max-width: ${theme.breakPoints.moblideLarge}) {
+    @media (max-width: ${theme.breakpoints.moblideLarge}) {
       font-size: ${theme.font.sizes.small};
       width: 90%;
     }
@@ -120,7 +104,7 @@ export const CardButton = styled.span<CardStyleProps>`
       margin-left: 1rem;
       margin-top: 0.3rem;
 
-      @media (max-width: ${theme.breakPoints.tablet}) {
+      @media (max-width: ${theme.breakpoints.tablet}) {
         font-size: ${theme.font.sizes.small};
         margin-left: ${theme.spacings.xxsmall};
       }
@@ -133,7 +117,7 @@ export const CardTitle = styled.h2`
     color: ${theme.font.colors.white};
     font-size: 2.4rem;
 
-    @media (max-width: ${theme.breakPoints.moblideLarge}) {
+    @media (max-width: ${theme.breakpoints.moblideLarge}) {
       font-size: ${theme.font.sizes.xlarge};
     }
   `}

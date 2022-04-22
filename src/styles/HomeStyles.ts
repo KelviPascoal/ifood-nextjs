@@ -5,7 +5,7 @@ export const Content = styled.div`
   ${({ theme }) => css`
     padding: 0 16%;
 
-    @media (max-width: ${theme.breakPoints.moblideLarge}) {
+    @media (max-width: ${theme.breakpoints.moblideLarge}) {
       padding: ${theme.spacings.xsmall};
     }
   `}
@@ -17,7 +17,7 @@ export const SearchArea = styled.div`
     grid-template-columns: 7fr 13rem;
     gap: 2.2rem;
 
-    @media (max-width: ${theme.breakPoints.moblideLarge}) {
+    @media (max-width: ${theme.breakpoints.tablet}) {
       grid-template-columns: 1fr;
       margin-top: -2rem;
     }
@@ -62,7 +62,7 @@ export const Cards = styled.div`
     display: flex;
     justify-content: center;
 
-    @media (max-width: ${theme.breakPoints.moblideLarge}) {
+    @media (max-width: ${theme.breakpoints.tablet}) {
       padding: ${theme.spacings.xsmall};
       flex-wrap: wrap;
       margin-top: 0;
@@ -81,7 +81,7 @@ export const MiniCards = styled.div`
     display: flex;
     justify-content: center;
 
-    @media (max-width: ${theme.breakPoints.moblideLarge}) {
+    @media (max-width: ${theme.breakpoints.laptop}) {
       display: grid;
       grid-template-columns: 1fr 1fr;
     }
@@ -124,7 +124,7 @@ export const BannerContainer = styled.div`
       margin-top: 0;
     }
 
-    @media (max-width: ${theme.breakPoints.moblideLarge}) {
+    @media (max-width: ${theme.breakpoints.moblideLarge}) {
       margin: 0;
     }
   `}
@@ -139,7 +139,7 @@ export const BannerContent = styled.div`
     background-repeat: no-repeat;
     background-size: 40rem;
 
-    @media (max-width: ${theme.breakPoints.moblideLarge}) {
+    @media (max-width: ${theme.breakpoints.moblideLarge}) {
       background-size: 30rem;
       img {
         width: 4rem;
@@ -151,7 +151,7 @@ export const BannerContent = styled.div`
       width: 100%;
     }
 
-    @media (max-width: ${theme.breakPoints.moblideLarge}) {
+    @media (max-width: ${theme.breakpoints.moblideLarge}) {
       display: flex;
       align-items: center;
     }
@@ -183,7 +183,7 @@ export const BannerInfo = styled.aside`
       margin-top: 0;
     }
 
-    @media (max-width: ${theme.breakPoints.moblideLarge}) {
+    @media (max-width: ${theme.breakpoints.moblideLarge}) {
       align-items: center;
       margin: 0 auto;
       margin-bottom: 18rem;
@@ -194,7 +194,7 @@ export const BannerInfo = styled.aside`
       font-size: 3.6rem;
       color: ${theme.font.colors.black};
 
-      @media (max-width: ${theme.breakPoints.moblideLarge}) {
+      @media (max-width: ${theme.breakpoints.moblideLarge}) {
         font-size: ${theme.font.sizes.xxlarge};
       }
     }
@@ -214,13 +214,13 @@ export const AdvertisingCover = styled.div`
   padding: 8rem 10.8rem;
   flex-wrap: wrap;
 
-    @media(max-width: ${theme.breakPoints.tablet}) {
+    @media(max-width: ${theme.breakpoints.tablet}) {
       padding: 4rem;
       justify-content: center;
       gap: 1.6rem;
     }
 
-    @media(max-width: ${theme.breakPoints.moblideLarge}) {
+    @media(max-width: ${theme.breakpoints.moblideLarge}) {
       padding: ${theme.spacings.xxsmall};
       align-items: center;
       justify-content: center;
@@ -236,7 +236,7 @@ export const AdvertisingCover = styled.div`
       justify-content: space-between;
       align-items: flex-start;
      
-      @media(max-width: ${theme.breakPoints.tablet}) {
+      @media(max-width: ${theme.breakpoints.tablet}) {
         width: 100%;
         align-items: center;
         height: auto;
@@ -248,7 +248,7 @@ export const AdvertisingCover = styled.div`
         font-size: 3.6rem;
         color: ${theme.font.colors.black};
 
-        @media (max-width: ${theme.breakPoints.moblideLarge}) {
+        @media (max-width: ${theme.breakpoints.moblideLarge}) {
             font-size: ${theme.font.sizes.xxlarge};
           }
       }
@@ -271,22 +271,22 @@ export const IfoodBeneficiosImg = styled.div`
     background-repeat: no-repeat;
     background-size: 100%;
 
-    @media (max-width: ${theme.breakPoints.tablet}) {
+    @media (max-width: ${theme.breakpoints.tablet}) {
       height: 34.9rem;
       background: url("/img/ifood-benefits-mobile.webp");
       background-repeat: no-repeat;
       background-size: 100%;
     }
 
-    @media (max-width: ${theme.breakPoints.moblideLarge}) {
+    @media (max-width: ${theme.breakpoints.moblideLarge}) {
       height: 19.5rem;
     }
 
-    @media (max-width: ${theme.breakPoints.mobileMedium}) {
+    @media (max-width: ${theme.breakpoints.mobileMedium}) {
       height: 17.2rem;
     }
 
-    @media (max-width: ${theme.breakPoints.moblideLarge}) {
+    @media (max-width: ${theme.breakpoints.moblideLarge}) {
       height: 14.2rem;
     }
   `}
@@ -298,11 +298,11 @@ export const NavigationsList = styled.div`
     grid-template-columns: 1fr 1fr 1fr;
     align-items: initial;
 
-    @media (max-width: ${theme.breakPoints.tablet}) {
+    @media (max-width: ${theme.breakpoints.tablet}) {
       grid-template-columns: 1fr 1fr;
     }
 
-    @media (max-width: ${theme.breakPoints.moblideLarge}) {
+    @media (max-width: ${theme.breakpoints.moblideLarge}) {
       grid-template-columns: 1fr;
     }
   `}

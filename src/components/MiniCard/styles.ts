@@ -16,22 +16,22 @@ export const MiniCard = styled.div<MiniCardStyleProps>`
     min-width: 18.8rem;
     height: 4.7rem;
 
-    @media (max-width: ${theme.breakPoints.tablet}) {
+    @media (max-width: ${theme.breakpoints.tablet}) {
       min-width: 15rem;
       height: 3.8rem;
     }
 
-    @media (max-width: ${theme.breakPoints.moblideLarge}) {
+    @media (max-width: ${theme.breakpoints.moblideLarge}) {
       min-width: 40%;
       height: 2.8rem;
     }
 
-    /* @media (max-width: ${theme.breakPoints.moblideLarge}) {
+    /* @media (max-width: ${theme.breakpoints.moblideLarge}) {
       min-width: 12rem;
       height: 2.8rem;
     } */
     /* 
-    @media (max-width: ${theme.breakPoints.moblideSmall}) {
+    @media (max-width: ${theme.breakpoints.moblideSmall}) {
       min-width: 10rem;
       height: 2.6rem;
     } */
@@ -74,21 +74,21 @@ export const ContainerImage = styled.div`
   ${({ theme }) => css`
     max-width: 15rem;
 
-    @media (max-width: ${theme.breakPoints.tablet}) {
+    @media (max-width: ${theme.breakpoints.tablet}) {
       max-width: 12rem;
       max-height: 9rem;
     }
 
-    @media (max-width: ${theme.breakPoints.moblideLarge}) {
+    @media (max-width: ${theme.breakpoints.moblideLarge}) {
       max-width: 9rem;
       max-height: 7rem;
     }
 
-    @media (max-width: ${theme.breakPoints.moblideLarge}) {
+    @media (max-width: ${theme.breakpoints.moblideLarge}) {
       max-width: 100%;
     }
 
-    /* @media (max-width: ${theme.breakPoints.moblideSmall}) {
+    /* @media (max-width: ${theme.breakpoints.moblideSmall}) {
       max-width: 8rem;
       max-height: 6.2rem;
     } */
