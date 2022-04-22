@@ -101,7 +101,7 @@ const Home: NextPage = () => {
               width: 92,
               alt: "foto de um celular escrito na tela entregas ate em 15 minutos",
             }}
-            variant="pink"
+            variant="red"
             text="Farmácia"
           />
           <MiniCard
