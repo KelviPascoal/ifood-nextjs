@@ -31,4 +31,12 @@ describe("<Button />", () => {
 
     expect(functionTest).toBeCalled();
   });
+
+  it("shold render a render a button with full width", () => {
+    render(<Button fullWidth>Test button</Button>);
+
+    expect(screen.getByRole("button", { name: /Test button/i })).toHaveStyle({
+      width: "100%",
+    });
+  });
 });
