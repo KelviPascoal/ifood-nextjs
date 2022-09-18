@@ -1,3 +1,5 @@
+import { ThemeProvider } from '@emotion/react';
+import { theme } from '../src/styles/theme';
 import { GlobalStyles } from '../src/styles/GlobalStyles'
 
 import * as NextImage from "next/image";
@@ -24,8 +26,6 @@ export const parameters = {
   },
 }
 
-import {theme} from '../src/styles/theme';
-import { ThemeProvider } from 'styled-components';
 
 export const decorators = [
   (Story) => (
