@@ -1,5 +1,5 @@
-import { css, DefaultTheme } from "styled-components";
-import styled from "styled-components";
+import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 
 import { MiniCardProps } from ".";
 
