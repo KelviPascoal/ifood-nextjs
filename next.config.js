@@ -5,8 +5,7 @@ const nextConfig = {
     domains: ["static-images.ifood.com.br"]
   },
   compiler: {
-    // ssr and displayName are configured by default
-    styledComponents: true,
+    emotion: true
   },
 }
 
