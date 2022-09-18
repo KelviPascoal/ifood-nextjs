@@ -1,5 +1,7 @@
+import { css } from "@emotion/react";
+import styled from "@emotion/styled";
 import { darken, lighten } from "polished";
-import styled, { css, DefaultTheme } from "styled-components";
+import { ThemeDefault } from "../../styles/emotion";
 import { ButtonProps } from ".";
 
 export type ButtonStyleProps = Pick<ButtonProps, "variant" | "fullWidth">;
@@ -22,7 +24,7 @@ export const Button = styled.button<ButtonStyleProps>`
 `;
 
 const buttonModifiers = {
-  default: (theme: DefaultTheme) => css`
+  default: (theme: ThemeDefault) => css`
     color: ${theme.font.colors.white};
     background-color: ${theme.colors.primary};
 
@@ -33,7 +35,7 @@ const buttonModifiers = {
       background-color: ${lighten(0.2, theme.colors.primary)};
     }
   `,
-  transparent: (theme: DefaultTheme) => css`
+  transparent: (theme: ThemeDefault) => css`
     color: ${theme.colors.primary};
     background-color: transparent;
     :hover {

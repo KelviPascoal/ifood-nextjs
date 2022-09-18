@@ -9,7 +9,7 @@ import {
   cidadesListMock,
   ifoodMarketingList,
   descubraList,
-} from "components/NavigationList/listMock";
+} from "components/NavigationList/list.mock";
 import { MiniCard } from "components/MiniCard";
 import { Tag } from "components/Tag";
 import type { NextPage } from "next";

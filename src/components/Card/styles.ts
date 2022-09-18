@@ -1,4 +1,6 @@
-import styled, { css } from "styled-components";
+import styled from "@emotion/styled";
+import { css } from "@emotion/react";
+
 import { CardProps } from ".";
 
 type CardStyleProps = Pick<CardProps, "variant">;
@@ -75,6 +77,8 @@ export const CardImage = styled.div`
 
 export const CardButton = styled.span<CardStyleProps>`
   ${({ theme, variant }) => css`
+    ${ButtonColors[variant!]()};
+
     color: ${theme.font.colors.white};
     font-weight: ${theme.font.bold};
     font-size: ${theme.font.sizes.small};
@@ -83,7 +87,6 @@ export const CardButton = styled.span<CardStyleProps>`
     border: 0;
     border-radius: calc(${theme.border.radius.rudimentar} * 2);
     padding: 0 1.2rem;
-    ${ButtonColors[variant!]};
     cursor: pointer;
 
     display: flex;
