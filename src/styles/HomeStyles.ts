@@ -2,62 +2,6 @@ import { darken } from "polished";
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 
-export const AdvertisingCover = styled.div`
-  ${({ theme }) => css`
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  padding: 8rem 10.8rem;
-  flex-wrap: wrap;
-
-    @media(max-width: ${theme.breakpoints.tablet}) {
-      padding: 4rem;
-      justify-content: center;
-      gap: 1.6rem;
-    }
-
-    @media(max-width: ${theme.breakpoints.moblideLarge}) {
-      padding: ${theme.spacings.xxsmall};
-      align-items: center;
-      justify-content: center;
-    }
-
-    aside {
-      width: 23.7rem;
-      height: 35rem;
-      padding: 3.5rem 0;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: flex-start;
-     
-      @media(max-width: ${theme.breakpoints.tablet}) {
-        width: 100%;
-        align-items: center;
-        height: auto;
-        padding: ${theme.spacings.xsmall};
-        gap: ${theme.spacings.xsmall};
-      }
-
-      h3 {
-        font-size: 3.6rem;
-        color: ${theme.font.colors.black};
-
-        @media (max-width: ${theme.breakpoints.moblideLarge}) {
-            font-size: ${theme.font.sizes.xxlarge};
-          }
-      }
-      
-      p {
-        font-size: 1.6rem;
-        color: ${theme.font.colors.darkGray};
-      }
-    }
-  }
-  `}
-`;
-
 export const IfoodBeneficiosImg = styled.div`
   ${({ theme }) => css`
     width: 100%;

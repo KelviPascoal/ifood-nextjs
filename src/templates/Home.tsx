@@ -69,21 +69,6 @@ export function HomeTemplate({
 
         <BannersFeature />
 
-        <S.AdvertisingCover>
-          <aside>
-            <h3>Você tem fome do quê?</h3>
-            <p>
-              Descubra como é ser um FoodLover e faça parte da nossa revolução!
-            </p>
-            <Button>Saiba mais</Button>
-          </aside>
-          <Image
-            src="/img/food-lover-banner.webp"
-            alt="Descubra como é ser um FoodLover e faça parte da nossa revolução"
-            width={731}
-            height={371}
-          />
-        </S.AdvertisingCover>
         <S.IfoodBeneficiosImg />
         <NavigationList
           title="Explore por cidades"
