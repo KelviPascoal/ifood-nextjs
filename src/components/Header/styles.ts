@@ -66,6 +66,7 @@ export const NavgationDropDown = styled.button`
     pointer-events: none;
     box-sizing: 0;
     margin-bottom: 2rem;
+    cursor: pointer;
 
     svg {
       font-size: ${theme.font.sizes.xlarge};
