@@ -2,7 +2,7 @@ import React from "react";
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { NavigationList } from ".";
-import { cidadesListMock } from "./listMock";
+import { cidadesListMock } from "./list.mock";
 
 export default {
   title: "NavigationList",

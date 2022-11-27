@@ -1,5 +1,6 @@
+import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 import { darken } from "polished";
-import styled, { css } from "styled-components";
 import { ListProps } from ".";
 
 type ListContainerProps = Pick<ListProps, "numberOfSizes">;

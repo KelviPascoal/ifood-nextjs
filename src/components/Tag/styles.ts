@@ -1,6 +1,7 @@
+import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 import Image from "next/image";
 import { darken } from "polished";
-import styled, { css } from "styled-components";
 
 export const Tag = styled.button`
   ${({ theme }) => css`

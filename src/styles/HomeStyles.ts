@@ -1,5 +1,6 @@
 import { darken } from "polished";
-import styled, { css } from "styled-components";
+import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 
 export const Content = styled.div`
   ${({ theme }) => css`

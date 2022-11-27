@@ -1,6 +1,7 @@
+import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 import { DividerProps } from "./index";
 import { lighten } from "polished";
-import styled, { css } from "styled-components";
 
 export const DividerStyle = styled.div<DividerProps>`
   ${({ theme, marginBottom, marginTop }) => css`
