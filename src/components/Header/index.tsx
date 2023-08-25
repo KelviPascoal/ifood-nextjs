@@ -22,7 +22,7 @@ export function Header() {
             aria-hidden={!menuIsOpen}
             menuIsOpen={menuIsOpen}
           >
-            <S.MenuMobile>
+            <S.MenuMobile menuIsOpen={menuIsOpen}>
               <S.MenuMobileHeader>
                 <Image
                   src="/ifood-img.png"

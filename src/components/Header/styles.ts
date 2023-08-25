@@ -126,16 +126,11 @@ export const MenuMobileContainer = styled.nav<MobileMenuProps>`
     pointer-events: ${menuIsOpen ? "all" : "none"};
     transition: opacity 0.3s ease-in-out;
     overflow: hidden;
-
-    ${MenuMobile} {
-      transform: ${menuIsOpen ? "translateX(0)" : "translateX(5rem)"};
-      transition: transform 0.3s ease-in-out;
-    }
   `}
 `;
 
-export const MenuMobile = styled.div`
-  ${({ theme }) => css`
+export const MenuMobile = styled.div<Pick<MobileMenuProps, "menuIsOpen">>`
+  ${({ theme, menuIsOpen }) => css`
     z-index: ${theme.layers.modal};
     overflow-x: none;
     position: absolute;
@@ -172,6 +167,9 @@ export const MenuMobile = styled.div`
       justify-content: space-between;
       align-items: center;
     }
+
+    transform: ${menuIsOpen ? "translateX(0)" : "translateX(5rem)"};
+    transition: transform 0.3s ease-in-out;
   `}
 `;
 
